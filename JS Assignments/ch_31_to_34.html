@@ -19,13 +19,16 @@ function Start(){
         console.log("Hello "+name+",Good AfterNoon");
    }else{
         console.log("Hello "+name+", Good Evening or Night");
-   }
+   } 
 
-   var DOB= new Date(year,mon,day);
+   var DOB= new Date(year,(mon+1),day);
    console.log("Your DOB is "+ DOB);
 
-   var age=DOB-current_time;
-   console.log ("You are "+age.getFullYear()+" years "+age.getMonth()+" Month "+age.days()+" Days "+age.getHours()+" Hours "+getMinutes()+" Minutes "+getMinutes()+" Seconds old");
+   var diff_dates=current_time.getTime() - DOB.getTime();
+   var days  = Math.ceil(diff_dates/(1000*60*60*24));
+  
+   console.log ("Your Age in Days "+days);
+ 
 }
 
 </script>
