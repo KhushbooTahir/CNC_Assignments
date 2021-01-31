@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Assignment 9 </title>
+</head>
+<script>
+
+function factorialize(num) {
+  let total = 1
+  for (let i = 1; i <= num; i++) {
+    total *= i
+  }
+  return total;
+}
+
+function CalculateFactorial(){
+    var numbr = parseInt(prompt("Enter Number : "));
+    var factorial = factorialize(numbr);
+    console.log("The Factorial of "+ numbr+" is : " + factorial);
+}
+
+function ConvertToCaptialize(input){
+    var stringSplitter = input.toLowerCase().split(" ");
+    var newString="";
+    for(var i=0; i< stringSplitter.length; i++)
+    {
+         stringSplitter[i]=stringSplitter[i].charAt(0).toUpperCase() + stringSplitter[i].slice(1);
+    }
+    newString = stringSplitter.join(" ");
+    return newString;
+}
+
+function CapitalizeString()
+{
+    var input =prompt("Enter String :");
+    var result = ConvertToCaptialize(input);
+    console.log("Capitalize String" + result);
+}
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 9</h2><br/>
+<b>Chapter 35 to 38:</b>
+<p>We implemented different operation through functions. </p>
+<Button class="mybtn" onClick="CalculateFactorial()">Number Factorial </Button>
+
+<Button class="mybtn" onClick="CapitalizeString()">Capitalize string</Button>
+</body>
+</html>

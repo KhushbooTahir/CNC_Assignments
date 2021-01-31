@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Assignment 10 </title>
+</head>
+<script>
+
+function Grades(){
+    var number1 = parseFloat(prompt('Enter first Course number: '));
+    var number2 = parseFloat(prompt('Enter second Course number: '));
+    var number3 = parseFloat(prompt('Enter third Course number: '));
+    var number4 = parseFloat(prompt('Enter 4th Course number: '));
+    var number5 = parseFloat(prompt('Enter 5th Course number: '));
+
+    var total= (number1+number2+number3+number4+number5)*100/500;
+    var grade;
+    switch (true) {
+    case total >= 90:
+        grade="A+";
+        break;
+    case total >= 75:
+        grade="A";
+        break;
+    case total >= 60:
+        grade="B";
+        break;
+    case total >= 45:
+        grade="C";
+        break;
+    case total >= 30:
+        grade="D";
+        break;
+    // Anything 29 or below is failing
+    default:
+        grade="F";
+}
+
+    alert("Student average is : "+ total +" and Grade is : "+ grade );
+}
+
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 10</h2><br/>
+<b>Chapter 39 to 42:</b>
+<p>We input 5 Courses Score and Calculate their Grades through Switch operation <p></b></b>
+
+<Button class="mybtn" onClick="Grades()">Calculate Grade</Button>
+</body>
+</html>

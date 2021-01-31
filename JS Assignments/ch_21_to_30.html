@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Assignment 7 </title>
+</head>
+<script>
+function Reverse()
+{
+    var size = parseFloat(prompt("Enter Decimal Number : ","3.4"));
+    var round_figure =Math.ceil(size);
+    var text="This is my dummy text";
+
+    var newText = text.slice(0, round_figure);
+
+    var reserveString ="" ;
+    for(var i=(newText.length-1); i>=0 ;i--){
+        reserveString=reserveString+newText[i];
+    }
+    alert(reserveString);
+}
+
+function CapitalizeString()
+{
+    var input =prompt("Enter String :");
+    var stringSplitter = input.toLowerCase().split(" ");
+    var newString="";
+    for(var i=0; i< stringSplitter.length; i++)
+    {
+         stringSplitter[i]=stringSplitter[i].charAt(0).toUpperCase() + stringSplitter[i].slice(1);
+    }
+    newString = stringSplitter.join(" ");
+    console.log(newString);
+}
+
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 7</h2><br/>
+<b>Chapter 21 to 30:</b>
+<p>We input decimal and trim length of the String and print in reverse order. Secondly, we Captilize input String. </p>
+<Button class="mybtn" onClick="Reverse()">Reverse string</Button>
+
+<Button class="mybtn" onClick="CapitalizeString()">Capitalize string</Button>
+</body>
+</html>

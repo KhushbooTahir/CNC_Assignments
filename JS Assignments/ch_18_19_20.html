@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Assignment 6 </title>
+</head>
+<script>
+function AddCourse()
+{
+    var courses=[] ;
+    for(var i=0; i<5;i++){
+        var course =prompt("course "+ (i+1) , "computer"); 
+        courses.push(course);
+    }
+
+    alert(courses);
+
+    alert("Now we show your Added Course One by One you can again modify them");
+
+    for(var i=0; i<courses.length; i++ ){
+        var current_course= courses[i];
+        var updated_value= prompt("course "+ (i+1) , current_course);
+        if(current_course!==updated_value){
+            courses.splice(i,1,updated_value);
+        }
+    }
+
+    alert(courses);
+}
+
+
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 6</h2><br/>
+<b>Chapter 18 to 20:</b>
+<p>We input Courses and perform Edit and print operation. Similar to Previous Task ; However both input and updation operation are implemented by For loop <p></b></b>
+<Button class="mybtn" onClick="AddCourse()">Calculator</Button>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Assignment 5 </title>
+</head>
+<script>
+function AddCourse()
+{
+    var courses=[] ;
+    var course1 =prompt("course 1", "computer"); 
+    var course2 =prompt("course 2", "math");
+    var course3 =prompt("course 3", "docker"); 
+    var course4 =prompt("course 4", "AI"); 
+    var course5 =prompt("course 5", "Blockchain");
+    courses.push(course1);
+    courses.push(course2);
+    courses.push(course3);
+    courses.push(course4);
+    courses.push(course5);
+    alert(courses);
+
+    alert("Now we show your Added Course One by One you can again modify them");
+
+    for(var i=0; i<courses.length; i++ ){
+        var current_course= courses[i];
+        var updated_value= prompt("course "+ (i+1) , current_course);
+        if(current_course!==updated_value){
+            courses.splice(i,1,updated_value);
+        }
+    }
+
+    alert(courses);
+}
+
+
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 5</h2><br/>
+<b>Chapter 15 to 17:</b>
+<p>We input Courses and perform Edit and print operation <p></b></b>
+<Button class="mybtn" onClick="AddCourse()">Calculator</Button>
+</body>
+</html>

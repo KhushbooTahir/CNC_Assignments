@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Assignment 8 </title>
+</head>
+<script>
+
+function Start(){
+    var name = prompt('Enter your Name: ');
+    var day = parseInt(prompt('Enter your DOB(date): '));
+    var mon = parseInt(prompt('Enter your DOB(mon): '));
+    var year = parseInt(prompt('Enter your DOB(year): '));
+   var current_time= new Date();
+   if(current_time.getHours>6 ||current_time.getHours<12)
+   {
+       console.log("Hello "+name+", Good Morning");
+   }
+   if(current_time.getHours<12 ||current_time.getHours<16)
+   {
+        console.log("Hello "+name+",Good AfterNoon");
+   }else{
+        console.log("Hello "+name+", Good Evening or Night");
+   }
+
+   var DOB= new Date(year,mon,day);
+   console.log("Your DOB is "+ DOB);
+
+   var age=DOB-current_time;
+   console.log ("You are "+age.getFullYear()+" years "+age.getMonth()+" Month "+age.days()+" Days "+age.getHours()+" Hours "+getMinutes()+" Minutes "+getMinutes()+" Seconds old");
+}
+
+</script>
+<style>
+.mybtn{
+background:#428bca;
+color:#fff;
+padding:10px;
+
+}
+</style>
+<body>
+<h2>Assignment 8</h2><br/>
+<b>Chapter 31 to 34:</b>
+<p>Date operations <p></b></b>
+
+<Button class="mybtn" onClick="Start()">Start</Button>
+</body>
+</html>
